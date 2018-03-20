@@ -17,11 +17,11 @@ export class MovieService {
     }
     selectMovie(movie){
     this.savedMovies.push(movie);
-    console.log(this.savedMovies +" has been saved")
+
     console.log(this.savedMovies);
     
   }
   getMovie(movie){
-    this.savedMovie.get(movie)
+    return this.savedMovies;
   }
 }
