@@ -8,12 +8,25 @@ import { AppComponent } from './app.component';
 import { ROUTING } from "./app.routing";
 import { HomeComponent } from "./home/home.component";
 import { AboutComponent } from "./about/about.component";
+import { MovieComponent } from './movie/movie.component';
+import { MovieService } from './movie.service';
+import { HttpClientModule } from '@angular/common/http';
+import { MovieSearchComponent } from './movie-search/movie-search.component';
+import { routes } from './app.router';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { FavoritesComponent } from './favorites/favorites.component';
 
 @NgModule({
     declarations: [
         AppComponent,
         AboutComponent,
-        HomeComponent
+        HomeComponent,
+        MovieComponent,
+        MovieSearchComponent,
+        LoginComponent,
+        RegisterComponent,
+        FavoritesComponent
     ],
     imports: [
         BrowserAnimationsModule,
@@ -21,9 +34,11 @@ import { AboutComponent } from "./about/about.component";
         FormsModule,
         HttpModule,
         ClarityModule,
-        ROUTING
+        ROUTING, 
+        routes,
+        HttpClientModule
     ],
-    providers: [],
+    providers: [MovieService],
     bootstrap: [AppComponent]
 })
 export class AppModule {

@@ -1,0 +1,19 @@
+<p>
+  Login here!
+</p>
+<div>
+   Email: <input class="email"
+   type="text"
+   placeholder="email"
+   name="email"
+   [(ngModel)]="user.email">
+   <p>
+   Password: <input class="password"
+   type="password"
+   placeholder="password"
+   [(ngModel)]="user.password">
+</p>
+</div>
+<p>
+<button class="btn btn-success" (click)="loginSubmit()">Login</button>
+</p>

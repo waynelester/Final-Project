@@ -1,0 +1,11 @@
+<p>
+<input [(ngModel)]="movie" placeholder="Search for Movie" (keyup.enter)="searchMovie(movie)">
+<button (click)="searchMovie(movie)">Search for Movie</button>
+</p>
+
+<div *ngIf="data">
+    <div *ngFor="let flick of data">
+        <DIV (click)="selectMovie(flick)">{{ flick.title }}</DIV>
+    </div>
+</div>
+<app-favorites [favorites]=savedMovies></app-favorites>

@@ -9,3 +9,10 @@
       margin-right: 11px;
   }
 }
+
+.header-spacer {
+  display: block;
+  flex-basis: 50% | auto; /* default auto */
+  align-self: flex-end;
+
+}
