@@ -4,7 +4,7 @@ import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class MovieService {
-  savedMovies: any;
+  savedMovies: any[]= [];
 
   api: string = "?api_key=e43aaac490cc35e0316bbc5bd9e5ad30";
   options: string = "&include_adult=false&language=en-US";
@@ -15,6 +15,13 @@ export class MovieService {
   getData(query: string){
       return this.http.get(this.base_url + this.api + this.options + "&query=" + query)
     }
-  
-
+    selectMovie(movie){
+    this.savedMovies.push(movie);
+    console.log(this.savedMovies +" has been saved")
+    console.log(this.savedMovies);
+    
+  }
+  getMovie(movie){
+    this.savedMovie.get(movie)
+  }
 }

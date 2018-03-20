@@ -8,7 +8,7 @@ import { MovieService } from '../movie.service';
 })
 export class FavoritesComponent implements OnInit {
   @Input() favorites;
-  
+
   constructor(private _movie: MovieService) { }
   
   ngOnInit() {

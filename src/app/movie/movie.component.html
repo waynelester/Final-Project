@@ -5,7 +5,7 @@
 
 <div *ngIf="data">
     <div *ngFor="let flick of data">
-        <DIV (click)="selectMovie(flick)">{{ flick.title }}</DIV>
+        <DIV (click)="getMovie(flick)">{{ flick.title }}</DIV>
     </div>
 </div>
 <app-favorites [favorites]=savedMovies></app-favorites>

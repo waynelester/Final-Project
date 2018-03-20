@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter } from '@angular/core';
 import { MovieService } from '../movie.service';
+
 
 @Component({
   selector: 'app-movie',
@@ -27,11 +28,14 @@ export class MovieComponent implements OnInit {
       }
       )
   }
-  
-  selectMovie(saver){
-    this.savedMovie = saver;
-    console.log(this.savedMovie.title +" has been saved")
-    console.log(this.savedMovie)
+  getMovie(movie){
+    this.savedMovie = this._movie.selectMovie(movie);
     
   }
+  // selectMovie(saver){
+  //   this.savedMovie = saver;
+  //   console.log(this.savedMovie.title +" has been saved")
+  //   console.log(this.savedMovie)
+    
+  // }
 }
