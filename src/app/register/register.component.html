@@ -2,10 +2,36 @@
   Register here!
 </p>
 <div>
-   Email: <input [(ngModel)]="email" placeholder="email">
+    First Name: <input 
+    type="text"
+    placeholder="First Name"
+    name="firstName"
+    [(ngModel)]="user.firstName">
+    <div></div>
+    Last Name: <input 
+    type="text"
+    placeholder="Last Name"
+    name="lastName"
+    [(ngModel)]="user.lastName">
+    <div></div>
+    Country: <input 
+    type="text"
+    placeholder="Country"
+    name="realm"
+    [(ngModel)]="user.realm">
+    <div></div>
+   Email: <input class="email"
+   type="text"
+   placeholder="email"
+   name="email"
+   [(ngModel)]="user.email">
    <p>
-   Password: <input [(ngModel)]="password" placeholder="password">
+   Password: <input class="password"
+   type="password"
+   placeholder="password"
+   [(ngModel)]="user.password">
 </p>
-<p></p>
-<button (click)="register(account)">Register</button>
 </div>
+<p>
+<button class="btn btn-success" (click)="registerSubmit()">Register</button>
+</p>

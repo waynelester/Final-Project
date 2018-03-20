@@ -13,4 +13,8 @@ export class UserService {
         console.log(user, "2nd")
             return this._http.post(this.baseUrl + "login", user);
 }
+    register(user){
+        console.log(user, "registered")
+        return this._http.post(this.baseUrl, user);
+    }
 }
