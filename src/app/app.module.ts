@@ -16,6 +16,7 @@ import { routes } from './app.router';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { FavoritesComponent } from './favorites/favorites.component';
+import { UserService } from './user.service';
 
 @NgModule({
     declarations: [
@@ -38,7 +39,7 @@ import { FavoritesComponent } from './favorites/favorites.component';
         routes,
         HttpClientModule
     ],
-    providers: [MovieService],
+    providers: [MovieService, UserService],
     bootstrap: [AppComponent]
 })
 export class AppModule {

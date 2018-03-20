@@ -8,6 +8,7 @@ import { MovieService } from '../movie.service';
 })
 export class FavoritesComponent implements OnInit {
   @Input() favorites;
+  savedMovies: any;
   
   constructor(private _movie: MovieService) { }
   
