@@ -17,6 +17,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { FavoritesComponent } from './favorites/favorites.component';
 import { UserService } from './user.service';
+import { RouteLoginComponent } from './route-login/route-login.component';
 
 @NgModule({
     declarations: [
@@ -27,7 +28,8 @@ import { UserService } from './user.service';
         MovieSearchComponent,
         LoginComponent,
         RegisterComponent,
-        FavoritesComponent
+        FavoritesComponent,
+        RouteLoginComponent
     ],
     imports: [
         BrowserAnimationsModule,

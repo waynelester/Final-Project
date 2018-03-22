@@ -1,3 +1,4 @@
+<h3> Click on a movie to add it to your favorites!</h3>
 <p>
 <input [(ngModel)]="movie" placeholder="Search for Movie" (keyup.enter)="searchMovie(movie)">
 <button (click)="searchMovie(movie)">Search for Movie</button>
@@ -8,4 +9,5 @@
         <DIV (click)="getMovie(flick)">{{ flick.title }}</DIV>
     </div>
 </div>
-<app-favorites [favorites]=savedMovies></app-favorites>
+<p></p>
+

@@ -1,3 +1,8 @@
+<h3>Favorites</h3>
 <ol *ngIf="favorites">
-    <li *ngFor="let movie of favorites">{{movie.title}}</li>
+    <li *ngFor="let movie of favorites">
+        {{movie.title}}
+        <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/{{movie.poster_path}}">
+        <!-- Use cards/boxes from clarity for structure here-->
+    </li>
 </ol>
