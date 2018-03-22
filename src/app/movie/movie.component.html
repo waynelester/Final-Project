@@ -6,7 +6,7 @@
 
 <div *ngIf="data">
     <div *ngFor="let flick of data">
-        <DIV (click)="getMovie(flick)">{{ flick.title }}</DIV>
+        <DIV (click)="addFave(flick)">{{ flick.title }}</DIV>
     </div>
 </div>
 <p></p>

@@ -7,6 +7,7 @@ export class UserService {
   constructor(private _http: HttpClient) { }
 
     baseUrl: string = "http://wayne-spring-2018-phortonssf.c9users.io:8080/api/appUsers/";
+    baseMovies: string = "/movies?access_token=";
    
 
     login(user){
@@ -17,4 +18,13 @@ export class UserService {
         console.log(user, "registered")
         return this._http.post(this.baseUrl, user);
     }
+      addFavorite(movie){
+    let userId = sessionStorage.getItem('userId');
+    let token = sessionStorage.getItem('token');
+    console.log(this.baseUrl + userId + this.baseMovies + token);
+    delete movie.id;
+    return this._http.post(this.baseUrl + userId + this.baseMovies + token, movie)
+  }
+
+
 }

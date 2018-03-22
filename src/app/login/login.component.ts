@@ -19,10 +19,11 @@ export class LoginComponent implements OnInit {
   console.log(this._user, "submit component - 1st");
   this._user.login(this.user)
   .subscribe(
-    userReg =>{ 
-      console.log(userReg, "reg")
+    (userRes: any ) =>{ 
+      console.log(userRes, "reg")
       this.router.navigate([`/movie`])
-
+ sessionStorage.setItem('token', userRes.token);
+sessionStorage.setItem('userId', userRes.userId);
     }
     )
   }

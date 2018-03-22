@@ -6,3 +6,37 @@
         <!-- Use cards/boxes from clarity for structure here-->
     </li>
 </ol>
+
+
+<div class="row">
+    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+        <div class="card">
+            <div class="card-header">
+                <ol *ngIf="favorites">
+    <li *ngFor="let movie of favorites">
+                {{movie.title}}
+            <div class="card-block">
+                <div class="card-media-block">
+                    <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/{{movie.poster_path}}" class="card-media-image">
+                    <div class="card-media-description">
+                        <span class="card-media-title">
+                            {{movie.genre}}
+                        </span>
+                        <span class="card-media-text">
+                            {{movie.release_date}}
+                        </span>
+                    </div>
+                </div>
+                <div class="card-text">
+                    {{movie.overview}}
+                </div>
+              
+            </div>
+              <div class="card-footer">
+                <button class="btn btn-sm btn-link">Remove from Favorites</button>
+            </div>
+                          </li>
+            </ol>
+          
+        </div>
+ </div>

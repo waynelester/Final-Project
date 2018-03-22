@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { MovieService } from '../movie.service';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-favorites',

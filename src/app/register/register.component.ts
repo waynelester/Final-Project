@@ -15,9 +15,11 @@ export class RegisterComponent implements OnInit {
  registerSubmit(){
   console.log(this._user, "1st");
   this._user.register(this.user)
-  .subscribe( userReg => { 
-    console.log(userReg, "res") 
+  .subscribe( ( userRes: any ) => { 
+    console.log(userRes, "res") 
    this.router.navigate([`/movie`])
+   sessionStorage.setItem('token', userRes.token);
+   sessionStorage.setItem('userId', userRes.userId);
      }
   )
   }

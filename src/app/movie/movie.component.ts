@@ -1,5 +1,6 @@
 import { Component, OnInit, EventEmitter } from '@angular/core';
 import { MovieService } from '../movie.service';
+import { UserService } from '../user.service';
 
 
 @Component({
@@ -12,7 +13,7 @@ export class MovieComponent implements OnInit {
   savedMovie: any;
  // results: object;
 
-  constructor(private _movie: MovieService) { 
+  constructor(private _movie: MovieService, private _user: UserService) { 
     // this.currentMovie = _movie.currentMovie
   }
 
@@ -38,4 +39,10 @@ export class MovieComponent implements OnInit {
   //   console.log(this.savedMovie)
     
   // }
+  addFave(movie) {
+  this._user.addFavorite(movie)
+  .subscribe(response => {
+    console.log(response);
+  });
+}
 }
