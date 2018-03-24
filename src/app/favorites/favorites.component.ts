@@ -15,5 +15,7 @@ export class FavoritesComponent implements OnInit {
   ngOnInit() {
         this.favorites = this._movie.savedMovies;
   }
-
+deleteMovie(movie) {
+  this._movie.deleteMovie(movie);
+}
 }

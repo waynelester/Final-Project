@@ -40,9 +40,11 @@ export class MovieComponent implements OnInit {
     
   // }
   addFave(movie) {
-  this._user.addFavorite(movie)
-  .subscribe(response => {
-    console.log(response);
-  });
+    this._user.addFavorite(movie)
+      .subscribe(response => {
+        console.log(response);
+        this._movie.selectMovie(movie);
+      }
+  );
 }
 }

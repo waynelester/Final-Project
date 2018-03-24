@@ -25,4 +25,9 @@ export class MovieService {
   getMovie(movie){
     return this.savedMovies;
   }
+   deleteMovie(currentMovie) {
+
+    this.savedMovies.splice(this.savedMovies.indexOf(currentMovie), 1);
+
+  }
 }
