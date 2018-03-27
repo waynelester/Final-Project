@@ -17,7 +17,7 @@
                 {{movie.title}}
             <div class="card-block">
                 <div class="card-media-block">
-                    <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/{{movie.poster_path}}" class="card-media-image">
+                    <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/{{movie.poster_path}}" class="card-img">
                     <div class="card-media-description">
                         <span class="card-media-title">
                             Rating: {{movie.vote_average}} / 10
@@ -33,30 +33,10 @@
               
             </div>
               <div class="card-footer">
-                <button class="btn btn-sm btn-link" (click)="deleteMovie(movie)">Remove from Favorites</button>
+                <button class="btn btn-sm btn-link" (click)="deleteBoth(movie)">Remove from Favorites</button>
             </div>
                           </li>
             </ol>
           
         </div>
  </div>
- 
- <div class="row">
-    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-          <ol *ngIf="favorites">
-    <li *ngFor="let movie of favorites">
-        <a href="..." class="card clickable">
-            <div class="card-img">
-                <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/{{movie.poster_path}}">
-            </div>
-            <div class="card-block">
-                <p class="card-text">
-                    
-                    {{movie.title}}
-                </p>
-            </div>
-        </a>
-        </ol>
-        </li>
-    </div>
-</div>

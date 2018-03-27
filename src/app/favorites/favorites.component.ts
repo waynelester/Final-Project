@@ -10,12 +10,20 @@ import { UserService } from '../user.service';
 export class FavoritesComponent implements OnInit {
   @Input() favorites;
 
-  constructor(private _movie: MovieService) { }
+  constructor(private _movie: MovieService, private _user: UserService) { }
   
   ngOnInit() {
         this.favorites = this._movie.savedMovies;
   }
-deleteMovie(movie) {
+deleteFave(movie) {
   this._movie.deleteMovie(movie);
+ 
+}
+deleteBkFave(movie) {
+  this._user.deleteFavorite(movie);
+}
+deleteBoth(movie){
+  this.deleteFave(movie);
+  this.deleteBkFave(movie);
 }
 }

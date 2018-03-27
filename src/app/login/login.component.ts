@@ -22,8 +22,8 @@ export class LoginComponent implements OnInit {
     (userRes: any ) =>{ 
       console.log(userRes, "reg")
       this.router.navigate([`/movie`])
- sessionStorage.setItem('token', userRes.token);
-sessionStorage.setItem('userId', userRes.userId);
+      sessionStorage.setItem('token', userRes.token);
+      sessionStorage.setItem('userId', userRes.userId);
     }
     )
   }
